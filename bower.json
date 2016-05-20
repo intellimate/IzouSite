@@ -1,0 +1,28 @@
+{
+  "name": "IzouWebApp",
+  "description": "The front-end website of Izou. This is where anything pertaining to Izou can be managed.",
+  "main": "index.php",
+  "authors": [
+    "Intellimate"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "izou",
+    "izousite",
+    "front-end",
+    "website"
+  ],
+  "homepage": "https://github.com/intellimate/IzouWebApp",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}

@@ -21,5 +21,8 @@ module.exports = function(grunt) {
 
 
     // Create the default task
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('default', ['gh-pages']);
+
+    // Create the default task
+    grunt.registerTask('deploy', ['uglify']);
 };
