@@ -26,6 +26,8 @@
     "grunt": "^1.0.1"
   },
   "devDependencies": {
+    "grunt-env": "^0.4.4",
+    "grunt-envpreprocess": "^0.1.3",
     "grunt-gh-pages": "^1.1.0"
   }
 }

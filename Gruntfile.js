@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         'gh-pages': {
             options: {
-                base: 'Sedna'
+                base: 'build'
             },
             src: ['**']
         }
@@ -23,6 +23,6 @@ module.exports = function(grunt) {
     // Create the default task
     grunt.registerTask('default', ['gh-pages']);
 
-    // Create the default task
+    // Create deploy task - this publishes the build folder to gh-pages
     grunt.registerTask('deploy', ['uglify']);
 };
