@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router, Route, IndexRoute, hashHistory } from "react-router";
 
-class Layout extends React.Component {
-    render() {
-        return (
-            <h1>Hello World!</h1>
-        );
-    }
-}
+import Layout from "./pages/Layout";
+import About from "./pages/About";
+
 
 const app = document.getElementById('app');
-ReactDOM.render(<Layout/>, app);
+
+ReactDOM.render(
+    <Router history={hashHistory}>
+        <Route path="/" component={Layout}/>
+        <Route path="blub" component={About}/>
+    </Router>,
+app);
