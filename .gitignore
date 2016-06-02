@@ -1,2 +1,6 @@
+# Project folders
 node_modules
 build
+
+# Webstorm folders
+.idea
