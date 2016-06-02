@@ -1,15 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Router, Route, hashHistory } from "react-router";
+import 'babel-polyfill'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import todoApp from './reducers'
+import App from './components/App'
 
-import Layout from "./components/Layout";
-import Article from "./components/Article";
+let store = createStore(todoApp)
 
-const app = document.getElementById('app');
-
-ReactDOM.render(
-  <Router history={hashHistory}>
-      <Route path="/" component={Layout}/>
-      <Route path="article" component={Article}/>
-  </Router>,
-app);
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)

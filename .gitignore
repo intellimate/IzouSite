@@ -6,7 +6,7 @@ build
 .idea
 
 # Build files
-src/app.js
+src/bundle.js
 
 # Other
 npm-debug.log
