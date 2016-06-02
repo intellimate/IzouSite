@@ -4,3 +4,9 @@ build
 
 # Webstorm folders
 .idea
+
+# Build files
+src/app.js
+
+# Other
+npm-debug.log

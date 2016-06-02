@@ -34,6 +34,7 @@
   "devDependencies": {
     "babel-cli": "6.7.7",
     "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
     "babel-plugin-transform-class-properties": "^6.9.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -43,6 +44,7 @@
     "gh-pages": "^0.11.0",
     "mocha": "^2.5.3",
     "npm-run-all": "1.6.0",
+    "react-hot-loader": "^1.3.0",
     "snazzy": "3.0.1",
     "standard": "6.0.8",
     "webpack": "^1.13.1",
@@ -52,9 +54,10 @@
     "prebuild": "npm run std",
     "build": "webpack --config webpack.config.prod.js",
     "build:dev": "webpack --config webpack.config.dev.js",
-    "dev": "webpack-dev-server --content-base src/html --inline --hot",
+    "dev": "webpack-dev-server --content-base src --inline --hot --progress --colors",
     "std": "standard --verbose | snazzy",
     "test": "mocha test",
+    "watch": "webpack --config webpack.config.dev.js --watch",
     "preversion": "git pull && npm up && npm run std",
     "version": "npm run build && git add -A .",
     "postversion": "git push --tags origin HEAD"
