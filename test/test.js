@@ -1,4 +1,4 @@
-// Using the BDD  mocca dialect
+// Using the BDD mocca dialect
 
 // Example test
 var assert = require('chai').assert;

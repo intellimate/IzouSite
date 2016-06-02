@@ -1,8 +1,2 @@
-# IDE Files
-.idea
-
-# Folders
 node_modules
-
-# Npn
-npm-debug.log
+build
