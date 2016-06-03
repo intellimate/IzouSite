@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var path = require('path');
 
 module.exports = {
     context: __dirname,
@@ -13,8 +12,12 @@ module.exports = {
         filename: "bundle.js"
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"development"'
+        }),
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.OccurenceOrderPlugin()
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         loaders: [
