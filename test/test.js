@@ -1,26 +1,12 @@
 import expect from 'expect'
-import * as actions from '../src/js/actions'
+import * as loginActions from '../src/js/actions/loginAction'
 
-describe('todo actions', () => {
-    it('addTodo should create ADD_TODO action', () => {
-        expect(actions.addTodo('Use Redux')).toEqual({
-            type: 'ADD_TODO',
-            id: 0,
-            text: 'Use Redux'
-        })
-    })
-
-    it('setVisibilityFilter should create SET_VISIBILITY_FILTER action', () => {
-        expect(actions.setVisibilityFilter('active')).toEqual({
-            type: 'SET_VISIBILITY_FILTER',
-            filter: 'active'
-        })
-    })
-
-    it('toggleTodo should create TOGGLE_TODO action', () => {
-        expect(actions.toggleTodo(1)).toEqual({
-            type: 'TOGGLE_TODO',
-            id: 1
+describe('login actions', () => {
+    it('login should return its own action', () => {
+        expect(loginActions.requestLogin('jundl77', 'test')).toEqual({
+            type: loginActions.LOGIN_REQUEST,
+            username: 'jundl77',
+            password: 'test'
         })
     })
 })
