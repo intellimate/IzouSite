@@ -1,16 +1,15 @@
-import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import todoApp from './reducers'
-import App from './components/App'
+import { Provider } from 'react-redux'
+import LoginForm from './containers/LoginForm'
+import loginReducer from './reducers/loginReducers'
 
-let store = createStore(todoApp)
+let store = createStore(loginReducer);
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
-)
+    <Provider store={store}>
+        <LoginForm />
+    </Provider>,
+    document.getElementById('root')
+);
