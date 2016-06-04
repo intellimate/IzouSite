@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux'
-import { requestLogin }  from '../actions/loginAction'
+import { login }  from '../../actions/account/loginAction'
 
 let LoginForm = ({ dispatch }) => {
     LoginForm.propTypes = {
@@ -11,7 +11,7 @@ let LoginForm = ({ dispatch }) => {
 
     let handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(requestLogin(username.value, password.value))
+        dispatch(login(username.value, password.value))
     }
 
     return (

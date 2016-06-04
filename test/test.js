@@ -1,5 +1,5 @@
 import expect from 'expect'
-import * as loginActions from '../src/js/actions/loginAction'
+import * as loginActions from '../src/js/actions/account/loginAction'
 
 describe('login actions', () => {
     it('login should return its own action', () => {
