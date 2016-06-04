@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux'
-import { createAccount }  from '../../actions/account/createAccountAction'
+import { createAccount, errorCreateAccount }  from '../../actions/account/createAccountAction'
+import ResponseField from '../../components/ResponseField'
 
-let CreateAccountForm = ({ dispatch }) => {
+let CreateAccountForm = ({response, dispatch}) => {
     CreateAccountForm.propTypes = {
+        response: PropTypes.string.isRequired,
         dispatch: PropTypes.func.isRequired
     }
 
@@ -14,7 +16,7 @@ let CreateAccountForm = ({ dispatch }) => {
         if (password1.value === password2.value) {
             dispatch(createAccount(username.value, password1.value, email.value))
         } else {
-            console.log("passwords not equal")
+            dispatch(errorCreateAccount({ code: -1, detail: "passwords do not match"}))
         }
     }
 
@@ -27,6 +29,7 @@ let CreateAccountForm = ({ dispatch }) => {
                 <input type="text" defaultValue="E-Mail" ref={node => { email = node }} />
                 <input type="submit" value="Login" />
             </form>
+            <ResponseField content={response} />
         </div>
     )
 }

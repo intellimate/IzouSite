@@ -1,9 +1,12 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux'
 import { login }  from '../../actions/account/loginAction'
+import ResponseField from '../../components/ResponseField'
 
-let LoginForm = ({ dispatch }) => {
+
+let LoginForm = ({response, dispatch}) => {
     LoginForm.propTypes = {
+        response: PropTypes.string.isRequired,
         dispatch: PropTypes.func.isRequired
     }
     
@@ -21,6 +24,7 @@ let LoginForm = ({ dispatch }) => {
                 <input type="password" ref={node => { password = node }} />
                 <input type="submit" value="Login" />
             </form>
+            <ResponseField content={response} />
         </div>
     )
 }
